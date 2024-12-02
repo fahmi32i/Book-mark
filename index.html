@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Bookmark</title>
+</head>
+<body>
+    <main class="interface py-5 position-relative">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <h1 class="head-main position-relative">Bookmarker</h1>
+            <div class="point-wrapper mt-5">
+                <span class="point"></span>
+            </div>                        
+               <div class="bookmark-body w-100 p-3 d-flex flex-column justify-content-center align-items-center">
+                <h2 class="gradient-icons">
+                    <i class="fa-solid fa-bookmark icon"></i>
+                    <span> Bookmark your favorite sites</span>
+                    <i class="fa-solid fa-bookmark icon"></i>
+                </h2>                
+                <div class="site-name w-100 d-flex flex-column justify-content-center pt-4">
+                    <label for="bookmarkName" class="form-label pb-1"><i class="fa-solid fa-book-bookmark pe-2"></i><span class="site">Site Name</span></label>
+                    <input type="text" class="form-control" id="bookmarkName" placeholder="Bookmark Name">
+                </div>
+                <div class="site-name w-100 d-flex flex-column justify-content-center pt-4">
+                    <label for="bookmarkURL" class="form-label pb-1"><i class="fa-solid fa-link pe-2"></i><span class="site">Site URL</span></label>
+                    <input type="url" class="form-control" id="bookmarkURL" placeholder="Website URL">
+                </div>
+                <button onclick="addBook()"  class="btn btn-submit px-5" id="addBtn">Submit</button>
+            </div>
+            <div class="point-wrapper">
+                <span class="point"></span>
+            </div>
+            <table class=" table mt-4 bg-light text-center" id="bookmarkTable">
+                <thead>
+                    <tr>
+                        <th class="text-capitalize">index</th>
+                        <th class="text-capitalize">website Name</th>
+                        <th class="text-capitalize">visit</th>
+                        <th class="text-capitalize">delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableContent"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+</html>
